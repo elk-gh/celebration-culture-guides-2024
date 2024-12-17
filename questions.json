@@ -1,0 +1,29 @@
+[
+    {
+        "question": "¿En qué año se fundó Salesforce?",
+        "answers": [
+            { "text": "1999", "correct": true },
+            { "text": "2000", "correct": false },
+            { "text": "2001", "correct": false },
+            { "text": "1995", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Cuál es el lema principal de Salesforce?",
+        "answers": [
+            { "text": "Innovación Continua", "correct": false },
+            { "text": "Éxito del Cliente", "correct": true },
+            { "text": "Crecimiento y Conexión", "correct": false },
+            { "text": "Transformación Digital", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué representan los valores de Salesforce?",
+        "answers": [
+            { "text": "Confianza, Igualdad, Innovación, Éxito del Cliente", "correct": true },
+            { "text": "Respeto, Inclusión, Liderazgo", "correct": false },
+            { "text": "Crecimiento, Productividad, Éxito", "correct": false },
+            { "text": "Futuro, Transformación, Liderazgo", "correct": false }
+        ]
+    }
+]
