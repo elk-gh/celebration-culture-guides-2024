@@ -1,63 +1,52 @@
-const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
-
-let questions = [];
 let currentQuestionIndex = 0;
+let questions = [];
 
-async function loadQuestions() {
-    try {
-        const response = await fetch("questions.json");
-        questions = await response.json();
-        startQuiz();
-    } catch (error) {
-        console.error("Error al cargar las preguntas:", error);
-    }
-}
+// Cargar preguntas desde el archivo JSON
+fetch('questions.json')
+    .then(response => response.json())
+    .then(data => {
+        questions = data;
+        showQuestion();
+    });
 
-function startQuiz() {
-    currentQuestionIndex = 0;
-    showQuestion();
-}
+const questionElement = document.getElementById('question');
+const answersElement = document.getElementById('answers');
+const nextButton = document.getElementById('next-btn');
 
 function showQuestion() {
     resetState();
     const currentQuestion = questions[currentQuestionIndex];
-    questionElement.textContent = currentQuestion.question;
+    questionElement.innerText = currentQuestion.question;
+
     currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.textContent = answer.text;
-        button.classList.add("btn");
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener("click", selectAnswer);
-        answerButtons.appendChild(button);
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('answer-button', 'slds-button');
+        button.addEventListener('click', () => selectAnswer(button, answer.correct));
+        answersElement.appendChild(button);
     });
 }
 
 function resetState() {
-    while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
+    nextButton.style.display = 'none';
+    answersElement.innerHTML = '';
+}
+
+function selectAnswer(button, isCorrect) {
+    const buttons = document.querySelectorAll('.answer-button');
+    buttons.forEach(btn => btn.disabled = true);
+
+    if (isCorrect) {
+        button.classList.add('correct');
+    } else {
+        button.classList.add('wrong');
     }
+
+    nextButton.style.display = 'block';
+    nextButton.addEventListener('click', goToNextQuestion);
 }
 
-function selectAnswer(e) {
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct === "true";
-    setStatusClass(selectedButton, correct);
-    Array.from(answerButtons.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct === "true");
-        button.disabled = true;
-    });
-    setTimeout(() => {
-        currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
-        showQuestion();
-    }, 1000);
+function goToNextQuestion() {
+    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+    showQuestion();
 }
-
-function setStatusClass(element, correct) {
-    element.classList.add(correct ? "correct" : "wrong");
-}
-
-// Cargar las preguntas al iniciar
-loadQuestions();

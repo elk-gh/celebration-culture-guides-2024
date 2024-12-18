@@ -18,15 +18,6 @@
         ]
     },
     {
-        "question": "¿Qué significa el valor 'Confianza' en Salesforce?",
-        "answers": [
-            { "text": "Seguridad en los datos del cliente", "correct": true },
-            { "text": "Innovación continua", "correct": false },
-            { "text": "Confianza entre empleados", "correct": false },
-            { "text": "Colaboración interna", "correct": false }
-        ]
-    },
-    {
         "question": "¿Cuál es la mascota oficial de Salesforce?",
         "answers": [
             { "text": "Astro", "correct": true },
@@ -63,30 +54,12 @@
         ]
     },
     {
-        "question": "¿Qué valor promueve Salesforce para la igualdad?",
-        "answers": [
-            { "text": "Diversidad e inclusión", "correct": true },
-            { "text": "Confianza en el equipo", "correct": false },
-            { "text": "Crecimiento profesional", "correct": false },
-            { "text": "Colaboración", "correct": false }
-        ]
-    },
-    {
         "question": "¿Qué nube de Salesforce está enfocada en ventas?",
         "answers": [
             { "text": "Sales Cloud", "correct": true },
             { "text": "Service Cloud", "correct": false },
             { "text": "Marketing Cloud", "correct": false },
             { "text": "Experience Cloud", "correct": false }
-        ]
-    },
-    {
-        "question": "¿Qué herramienta de Salesforce utiliza inteligencia artificial?",
-        "answers": [
-            { "text": "Einstein", "correct": true },
-            { "text": "Flow Builder", "correct": false },
-            { "text": "Lightning App Builder", "correct": false },
-            { "text": "Apex", "correct": false }
         ]
     }
 ]

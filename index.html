@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Quiz Infinito</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Salesforce</title>
+    <!-- SLDS Styles -->
+    <link rel="stylesheet" href="https://www.lightningdesignsystem.com/assets/styles/salesforce-lightning-design-system.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Salesforce Quiz</h1>
-        <p>Responde las preguntas y pon a prueba tu conocimiento sobre Salesforce.</p>
-    </header>
-    <main>
-        <div id="quiz-container">
-            <div id="question-container">
-                <h2 id="question"></h2>
-                <ul id="answer-buttons"></ul>
+    <div id="app" class="slds-grid slds-align_absolute-center slds-text-align_center">
+        <div class="quiz-container slds-box slds-theme_default slds-p-around_medium">
+            <h1 class="slds-text-heading_large slds-m-bottom_medium">Salesforce Quiz</h1>
+            <div id="question-box">
+                <p id="question" class="slds-text-heading_medium"></p>
+                <div id="answers" class="slds-grid slds-wrap"></div>
             </div>
+            <button id="next-btn" class="slds-button slds-button_brand slds-m-top_medium" style="display:none;">Siguiente Pregunta</button>
         </div>
-    </main>
-    <footer>
-        <p>Hecho con ❤️ en Colombia</p>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
