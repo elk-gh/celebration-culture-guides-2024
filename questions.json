@@ -65,28 +65,28 @@
     {
         "question": "¿Qué es Culture Guide?",
         "answers": [
-            { "text": "Culture Guides is a training platform to teach Salesforce CRM best practices.", "correct": false },
-            { "text": "Culture Guides program brings Salesforce’s unique culture to life and creates a deep sense of belonging and pride for employees everywhere.", "correct": true },
-            { "text": "Culture Guides is an AI-driven assistant for employee support and communication.", "correct": false },
-            { "text": "Culture Guides is a team that manages customer onboarding processes.", "correct": false }
+            { "text": "Un programa que da vida a la cultura única de Salesforce y crea un profundo sentido de pertenencia y orgullo para los empleados.", "correct": true },
+            { "text": "Un equipo que gestiona los procesos de incorporación de clientes.", "correct": false },
+            { "text": "Un asistente impulsado por IA para soporte de empleados.", "correct": false },
+            { "text": "Una plataforma de formación para enseñar mejores prácticas de Salesforce CRM.", "correct": false }
         ]
     },
     {
         "question": "¿Qué es Agentforce?",
         "answers": [
-            { "text": "Agentforce is a CRM extension for tracking customer satisfaction surveys.", "correct": false },
-            { "text": "Agentforce is a training program for new Salesforce agents.", "correct": false },
-            { "text": "Agentforce is a proactive, autonomous AI application that provides specialized, always-on support to employees or customers.", "correct": true },
-            { "text": "Agentforce is a tool for managing customer service team schedules.", "correct": false }
+            { "text": "Una aplicación de IA autónoma que proporciona soporte especializado y constante a empleados o clientes.", "correct": true },
+            { "text": "Un programa de formación para nuevos agentes de Salesforce.", "correct": false },
+            { "text": "Una herramienta para gestionar los horarios del equipo de atención al cliente.", "correct": false },
+            { "text": "Una extensión de CRM para encuestas de satisfacción de clientes.", "correct": false }
         ]
     },
     {
         "question": "¿Qué es Data Cloud?",
         "answers": [
-            { "text": "Ingest, harmonize, unify, and analyze streaming and batch data.", "correct": true },
-            { "text": "A feature to monitor the health of Salesforce servers.", "correct": false },
-            { "text": "A marketing tool designed to track campaign performance.", "correct": false },
-            { "text": "A cloud-based solution for storing files securely in Salesforce.", "correct": false }
+            { "text": "Una herramienta para ingerir, armonizar, unificar y analizar datos en streaming y por lotes.", "correct": true },
+            { "text": "Una solución basada en la nube para almacenar archivos de forma segura en Salesforce.", "correct": false },
+            { "text": "Una herramienta de marketing para hacer seguimiento al desempeño de campañas.", "correct": false },
+            { "text": "Una característica para monitorear la salud de los servidores de Salesforce.", "correct": false }
         ]
     }
 ]
