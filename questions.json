@@ -61,5 +61,32 @@
             { "text": "Marketing Cloud", "correct": false },
             { "text": "Experience Cloud", "correct": false }
         ]
+    },
+    {
+        "question": "¿Qué es Culture Guide?",
+        "answers": [
+            { "text": "Culture Guides is a training platform to teach Salesforce CRM best practices.", "correct": false },
+            { "text": "Culture Guides program brings Salesforce’s unique culture to life and creates a deep sense of belonging and pride for employees everywhere.", "correct": true },
+            { "text": "Culture Guides is an AI-driven assistant for employee support and communication.", "correct": false },
+            { "text": "Culture Guides is a team that manages customer onboarding processes.", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué es Agentforce?",
+        "answers": [
+            { "text": "Agentforce is a CRM extension for tracking customer satisfaction surveys.", "correct": false },
+            { "text": "Agentforce is a training program for new Salesforce agents.", "correct": false },
+            { "text": "Agentforce is a proactive, autonomous AI application that provides specialized, always-on support to employees or customers.", "correct": true },
+            { "text": "Agentforce is a tool for managing customer service team schedules.", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué es Data Cloud?",
+        "answers": [
+            { "text": "Ingest, harmonize, unify, and analyze streaming and batch data.", "correct": true },
+            { "text": "A feature to monitor the health of Salesforce servers.", "correct": false },
+            { "text": "A marketing tool designed to track campaign performance.", "correct": false },
+            { "text": "A cloud-based solution for storing files securely in Salesforce.", "correct": false }
+        ]
     }
 ]
