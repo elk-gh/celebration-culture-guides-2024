@@ -9,44 +9,41 @@ fetch('questions.json')
         showQuestion();
     });
 
-const questionElement = document.getElementById('question');
-const answersElement = document.getElementById('answers');
-const nextButton = document.getElementById('next-btn');
-
+// Mostrar una pregunta
 function showQuestion() {
-    resetState();
+    const questionElement = document.getElementById('question');
+    const answersElement = document.getElementById('answers');
     const currentQuestion = questions[currentQuestionIndex];
-    questionElement.innerText = currentQuestion.question;
 
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.innerText = answer.text;
-        button.classList.add('answer-button', 'slds-button');
-        button.addEventListener('click', () => selectAnswer(button, answer.correct));
-        answersElement.appendChild(button);
+    // Mostrar la pregunta
+    questionElement.textContent = currentQuestion.question;
+
+    // Limpiar respuestas previas
+    answersElement.innerHTML = '';
+
+    // Mezclar respuestas y mostrarlas
+    const shuffledAnswers = currentQuestion.answers.sort(() => Math.random() - 0.5);
+    shuffledAnswers.forEach(answer => {
+        const li = document.createElement('li');
+        li.textContent = answer.text;
+        li.className = 'slds-p-vertical_x-small slds-theme_alert-texture slds-border_bottom';
+        li.onclick = () => checkAnswer(answer.correct, li);
+        answersElement.appendChild(li);
     });
 }
 
-function resetState() {
-    nextButton.style.display = 'none';
-    answersElement.innerHTML = '';
-}
-
-function selectAnswer(button, isCorrect) {
-    const buttons = document.querySelectorAll('.answer-button');
-    buttons.forEach(btn => btn.disabled = true);
-
+// Validar respuesta
+function checkAnswer(isCorrect, element) {
     if (isCorrect) {
-        button.classList.add('correct');
+        element.classList.add('slds-theme_success');
+        element.innerHTML += ' ✅';
     } else {
-        button.classList.add('wrong');
+        element.classList.add('slds-theme_error');
+        element.innerHTML += ' ❌';
     }
 
-    nextButton.style.display = 'block';
-    nextButton.addEventListener('click', goToNextQuestion);
-}
-
-function goToNextQuestion() {
-    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
-    showQuestion();
+    setTimeout(() => {
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+        showQuestion();
+    }, 1500);
 }
