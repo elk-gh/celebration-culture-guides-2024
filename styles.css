@@ -23,11 +23,22 @@ footer {
     text-align: center;
 }
 
-/* Contenedor principal */
+/* Centrado del contenedor principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
 #game-container {
     width: 100%;
     max-width: 600px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
 }
 
 /* Opciones de respuesta en cuadrícula */
