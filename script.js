@@ -24,11 +24,11 @@ function showQuestion() {
     // Mezclar respuestas y mostrarlas
     const shuffledAnswers = currentQuestion.answers.sort(() => Math.random() - 0.5);
     shuffledAnswers.forEach(answer => {
-        const li = document.createElement('li');
-        li.textContent = answer.text;
-        li.className = 'slds-box slds-theme_default';
-        li.onclick = () => checkAnswer(answer.correct, li);
-        answersElement.appendChild(li);
+        const div = document.createElement('div');
+        div.textContent = answer.text;
+        div.className = 'slds-box slds-theme_default';
+        div.onclick = () => checkAnswer(answer.correct, div);
+        answersElement.appendChild(div);
     });
 }
 
