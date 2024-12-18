@@ -26,7 +26,7 @@ function showQuestion() {
     shuffledAnswers.forEach(answer => {
         const li = document.createElement('li');
         li.textContent = answer.text;
-        li.className = 'slds-p-vertical_x-small slds-theme_alert-texture slds-border_bottom';
+        li.className = 'slds-box slds-theme_default';
         li.onclick = () => checkAnswer(answer.correct, li);
         answersElement.appendChild(li);
     });
