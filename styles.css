@@ -1,49 +1,22 @@
 body {
+    background: linear-gradient(to bottom, #fecb00 33%, #003366 33%, #ce1126 33%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     font-family: 'Salesforce Sans', Arial, sans-serif;
-    /* Bandera de Colombia como fondo */
-    background: linear-gradient(33%, #FFD700 33%, #0033A0 66%, #CE1126 100%);
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.quiz-container {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 90%;
-    max-width: 600px;
-    padding: 20px;
-}
-
-#answers {
-    gap: 1rem;
-    justify-content: center;
-}
-
-.answer-button {
-    flex: 1 1 calc(45% - 1rem);
-    padding: 10px;
-    background-color: #f4f6f9;
-    border: 1px solid #d8dde6;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.answer-button.correct {
-    background-color: #2ecc71;
+header, footer {
     color: white;
+    text-align: center;
 }
 
-.answer-button.wrong {
-    background-color: #e74c3c;
-    color: white;
+.logo, .flag {
+    height: 50px;
+    display: inline-block;
 }
 
-.answer-button:hover {
-    background-color: #e3e6eb;
+footer {
+    margin-top: auto;
 }
