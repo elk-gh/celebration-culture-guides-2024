@@ -1,6 +1,5 @@
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
 
 let questions = [];
 let currentQuestionIndex = 0;
@@ -9,10 +8,15 @@ async function loadQuestions() {
     try {
         const response = await fetch("questions.json");
         questions = await response.json();
-        showQuestion();
+        startQuiz();
     } catch (error) {
         console.error("Error al cargar las preguntas:", error);
     }
+}
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    showQuestion();
 }
 
 function showQuestion() {
@@ -32,7 +36,6 @@ function showQuestion() {
 }
 
 function resetState() {
-    nextButton.style.display = "none";
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -41,26 +44,20 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === "true";
+    setStatusClass(selectedButton, correct);
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct === "true");
+        button.disabled = true;
     });
-    nextButton.style.display = "block";
+    setTimeout(() => {
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+        showQuestion();
+    }, 1000);
 }
 
 function setStatusClass(element, correct) {
-    element.style.backgroundColor = correct ? "#28A745" : "#DC3545";
+    element.classList.add(correct ? "correct" : "wrong");
 }
 
-nextButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        showQuestion();
-    } else {
-        alert("¡Quiz completado!");
-        currentQuestionIndex = 0;
-        showQuestion();
-    }
-});
-
-// Cargar las preguntas al iniciar la aplicación
+// Cargar las preguntas al iniciar
 loadQuestions();

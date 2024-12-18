@@ -9,21 +9,84 @@
         ]
     },
     {
-        "question": "¿Cuál es el lema principal de Salesforce?",
+        "question": "¿Quién es el fundador de Salesforce?",
         "answers": [
-            { "text": "Innovación Continua", "correct": false },
-            { "text": "Éxito del Cliente", "correct": true },
-            { "text": "Crecimiento y Conexión", "correct": false },
-            { "text": "Transformación Digital", "correct": false }
+            { "text": "Marc Benioff", "correct": true },
+            { "text": "Larry Ellison", "correct": false },
+            { "text": "Bill Gates", "correct": false },
+            { "text": "Elon Musk", "correct": false }
         ]
     },
     {
-        "question": "¿Qué representan los valores de Salesforce?",
+        "question": "¿Qué significa el valor 'Confianza' en Salesforce?",
         "answers": [
-            { "text": "Confianza, Igualdad, Innovación, Éxito del Cliente", "correct": true },
-            { "text": "Respeto, Inclusión, Liderazgo", "correct": false },
-            { "text": "Crecimiento, Productividad, Éxito", "correct": false },
-            { "text": "Futuro, Transformación, Liderazgo", "correct": false }
+            { "text": "Seguridad en los datos del cliente", "correct": true },
+            { "text": "Innovación continua", "correct": false },
+            { "text": "Confianza entre empleados", "correct": false },
+            { "text": "Colaboración interna", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Cuál es la mascota oficial de Salesforce?",
+        "answers": [
+            { "text": "Astro", "correct": true },
+            { "text": "Codey", "correct": false },
+            { "text": "Einstein", "correct": false },
+            { "text": "Appy", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué herramienta de Salesforce permite automatizar procesos?",
+        "answers": [
+            { "text": "Flow", "correct": true },
+            { "text": "Apex", "correct": false },
+            { "text": "SOQL", "correct": false },
+            { "text": "Chatter", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué es AppExchange?",
+        "answers": [
+            { "text": "Una tienda de aplicaciones para Salesforce", "correct": true },
+            { "text": "Una herramienta para reportes", "correct": false },
+            { "text": "Un lenguaje de programación", "correct": false },
+            { "text": "Un servicio de soporte", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué es Trailhead?",
+        "answers": [
+            { "text": "Una plataforma de aprendizaje de Salesforce", "correct": true },
+            { "text": "Un programa de socios de Salesforce", "correct": false },
+            { "text": "Un tipo de licencia", "correct": false },
+            { "text": "Una herramienta de colaboración", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué valor promueve Salesforce para la igualdad?",
+        "answers": [
+            { "text": "Diversidad e inclusión", "correct": true },
+            { "text": "Confianza en el equipo", "correct": false },
+            { "text": "Crecimiento profesional", "correct": false },
+            { "text": "Colaboración", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué nube de Salesforce está enfocada en ventas?",
+        "answers": [
+            { "text": "Sales Cloud", "correct": true },
+            { "text": "Service Cloud", "correct": false },
+            { "text": "Marketing Cloud", "correct": false },
+            { "text": "Experience Cloud", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué herramienta de Salesforce utiliza inteligencia artificial?",
+        "answers": [
+            { "text": "Einstein", "correct": true },
+            { "text": "Flow Builder", "correct": false },
+            { "text": "Lightning App Builder", "correct": false },
+            { "text": "Apex", "correct": false }
         ]
     }
 ]
