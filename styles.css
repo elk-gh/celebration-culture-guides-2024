@@ -2,10 +2,10 @@
 body {
     background: linear-gradient(to bottom, #fecb00 33.33%, #003366 66.66%, #ce1126 100%);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     margin: 0;
     font-family: 'Salesforce Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -23,17 +23,31 @@ footer {
     text-align: center;
 }
 
-/* Opciones de respuesta */
-#answers li {
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+/* Contenedor principal */
+#game-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
 }
 
-#answers li:hover {
-    transform: scale(1.02);
+/* Opciones de respuesta en cuadrícula */
+#answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+#answers div {
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#answers div:hover {
+    transform: scale(1.05);
     background-color: #eaf5fc;
 }
 
