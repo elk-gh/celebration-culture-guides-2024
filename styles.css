@@ -1,5 +1,6 @@
+/* Fondo con los colores de la bandera de Colombia */
 body {
-    background: linear-gradient(to bottom, #fecb00 33%, #003366 33%, #ce1126 33%);
+    background: linear-gradient(to bottom, #fecb00 33.33%, #003366 66.66%, #ce1126 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,16 +8,41 @@ body {
     font-family: 'Salesforce Sans', Arial, sans-serif;
 }
 
-header, footer {
+header {
     color: white;
     text-align: center;
 }
 
 .logo, .flag {
     height: 50px;
-    display: inline-block;
 }
 
 footer {
     margin-top: auto;
+    color: white;
+    text-align: center;
+}
+
+/* Opciones de respuesta */
+#answers li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+#answers li:hover {
+    transform: scale(1.02);
+    background-color: #eaf5fc;
+}
+
+.slds-theme_success {
+    background-color: #0070d2;
+    color: white;
+}
+
+.slds-theme_error {
+    background-color: #f04f47;
+    color: white;
 }
